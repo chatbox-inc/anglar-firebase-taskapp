@@ -1,0 +1,20 @@
+<form>
+  <div>
+    <mat-form-field appearance="fill" style="width: 100%">
+      <mat-label>タスク名</mat-label>
+      <input matInput type="text" name="name" [(ngModel)]="task.name" [disabled]="disabled">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="fill" style="width: 100%">
+      <mat-label>日付</mat-label>
+      <input matInput type="date" name="date_on" [(ngModel)]="task.date_on" [disabled]="disabled">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="fill" style="width: 100%">
+      <mat-label>詳細</mat-label>
+      <textarea matInput name="body" rows="5" [(ngModel)]="task.body" [disabled]="disabled"></textarea>
+    </mat-form-field>
+  </div>
+</form>

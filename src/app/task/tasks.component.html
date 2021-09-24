@@ -1,0 +1,9 @@
+<div>
+  <a mat-raised-button color="primary" routerLink="/tasks/new">タスクの追加</a>
+</div>
+<mat-divider></mat-divider>
+<mat-nav-list>
+  <mat-list-item *ngFor="let task of tasks" routerLink="/tasks/{{task.id}}">
+    {{ task.name }}
+  </mat-list-item>
+</mat-nav-list>

@@ -1,0 +1,7 @@
+<div>
+  <h2>タスクの追加</h2>
+</div>
+<div *ngIf="task">
+  <app-task-form [task]="task"></app-task-form>
+  <button (click)="createTask()" mat-raised-button color="primary">タスクの追加</button>
+</div>

@@ -1,0 +1,7 @@
+<div *ngIf="task">
+  <div>
+    <h2>タスクの削除</h2>
+    <p>タスク {{ task.name }} を削除しても良いですか？</p>
+  </div>
+  <button (click)="deleteTask()" mat-raised-button color="warn">タスクの削除</button>
+</div>
