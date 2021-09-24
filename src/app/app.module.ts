@@ -17,8 +17,8 @@ import {MatInputModule} from "@angular/material/input";
 import {MatListModule} from "@angular/material/list";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatDividerModule} from "@angular/material/divider";
+import {MatIconModule} from "@angular/material/icon";
 
-import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './components/layouts/header.component';
 import { TaskFormComponent } from './components/task/task-form.component';
 import { TasksComponent } from './task/tasks.component';
@@ -33,14 +33,14 @@ const materialModules = [
   MatInputModule,
   MatListModule,
   MatToolbarModule,
-  MatDividerModule
+  MatDividerModule,
+  MatIconModule
 ]
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     HeaderComponent,
     TaskFormComponent,
     TasksComponent,
