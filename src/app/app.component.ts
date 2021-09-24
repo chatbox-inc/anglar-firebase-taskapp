@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {AuthService} from "./services/auth.service";
 
 @Component({
@@ -6,11 +6,14 @@ import {AuthService} from "./services/auth.service";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  isLogin: any | null = null
   title = 'ng-mobile';
-  constructor(authService: AuthService) {
+  constructor(private authService: AuthService) {}
+  ngOnInit() {
     console.log("check")
-    authService.checkIsLogin()
-    console.log(authService.isLogin)
+    this.authService.checkIsLogin().subscribe(auth => {
+      this.isLogin = !!auth
+    })
   }
 }

@@ -7,7 +7,6 @@ import {Observable} from "rxjs";
   providedIn: 'root'
 })
 export class AuthService {
-  isLogin: boolean = false
 
   constructor(
     private readonly afAuth: AngularFireAuth
@@ -22,9 +21,7 @@ export class AuthService {
   user() {
     return this.afAuth.user
   }
-  checkIsLogin(): void {
-    this.afAuth.authState.subscribe(auth => {
-      this.isLogin = !!auth
-    })
+  checkIsLogin(): Observable<any> {
+    return this.afAuth.authState
   }
 }

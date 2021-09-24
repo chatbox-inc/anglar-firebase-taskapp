@@ -21,11 +21,12 @@ import {MatIconModule} from "@angular/material/icon";
 
 import { HeaderComponent } from './components/layouts/header.component';
 import { TaskFormComponent } from './components/task/task-form.component';
-import { TasksComponent } from './task/tasks.component';
-import { TaskDetailComponent } from './task/task-detail.component';
-import { TaskNewComponent } from './task/task-new.component';
-import { TaskEditComponent } from './task/task-edit.component';
-import { TaskDoneComponent } from './task/task-done.component';
+import { ListComponent } from './pages/tasks/list.component';
+import { IdComponent } from './pages/tasks/id.component';
+import { NewComponent } from './pages/tasks/new.component';
+import { EditComponent } from './pages/tasks/edit.component';
+import { DoneComponent } from './pages/tasks/done.component';
+import { HomeComponent } from './pages/home/home.component';
 
 const materialModules = [
   MatButtonModule,
@@ -43,11 +44,12 @@ const materialModules = [
     AppComponent,
     HeaderComponent,
     TaskFormComponent,
-    TasksComponent,
-    TaskDetailComponent,
-    TaskNewComponent,
-    TaskEditComponent,
-    TaskDoneComponent
+    ListComponent,
+    IdComponent,
+    NewComponent,
+    EditComponent,
+    DoneComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

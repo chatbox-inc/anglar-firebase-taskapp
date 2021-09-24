@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {AuthService} from "../../services/auth.service";
-import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-header',
@@ -9,23 +8,20 @@ import {Router} from "@angular/router";
 })
 export class HeaderComponent implements OnInit {
 
-  user: any | null = null
+
+  @Input()
+  isLogin!: boolean;
   constructor(
     private authService: AuthService,
-    private router: Router
   ) { }
 
-  ngOnInit(): void {
-    this.authService.user().subscribe(value => {
-      this.user = value
-    })
+  ngOnInit() {
+    console.log(this.isLogin)
   }
   async login() {
     await this.authService.signInWithGoogle()
-    await this.router.navigate(["tasks"])
   }
   async logout() {
     await this.authService.signOutWithGoogle()
-    await this.router.navigate(["login"])
   }
 }
