@@ -4,7 +4,7 @@
 <div>
   <div *ngIf="task">
     <app-task-form [task]="task" [disabled]="true"></app-task-form>
-    <a routerLink="/tasks/{{task.id}}/edit" mat-raised-button color="primary">編集</a>
-    <a routerLink="/tasks/{{task.id}}/done" mat-raised-button color="warn">削除</a>
+    <a routerLink="/tasks/{{task.id}}/edit" mat-raised-button color="primary" class="space">編集</a>
+    <a routerLink="/tasks/{{task.id}}/done" mat-raised-button color="warn" class="space">削除</a>
   </div>
 </div>

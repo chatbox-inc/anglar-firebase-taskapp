@@ -6,6 +6,7 @@ import {ActivatedRoute} from "@angular/router";
 @Component({
   selector: 'app-task-detail',
   templateUrl: './id.component.html',
+  styleUrls: ['./id.component.css']
 })
 export class IdComponent implements OnInit {
 

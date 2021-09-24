@@ -7,13 +7,14 @@ import {AuthService} from "./services/auth.service";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  isLogin: any | null = null
+  isLogin: boolean = false
   title = 'ng-mobile';
   constructor(private authService: AuthService) {}
   ngOnInit() {
     console.log("check")
     this.authService.checkIsLogin().subscribe(auth => {
-      this.isLogin = !!auth
+      this.isLogin = auth
+      console.log(auth)
     })
   }
 }

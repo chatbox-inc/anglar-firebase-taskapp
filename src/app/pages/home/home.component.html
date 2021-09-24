@@ -1,3 +1,3 @@
 <div>
-  <a mat-button color="primary" routerLink="/tasks">タスク一覧へ</a>
+  <a *ngIf="isLogin" mat-button color="primary" routerLink="/tasks">タスク一覧へ</a>
 </div>
