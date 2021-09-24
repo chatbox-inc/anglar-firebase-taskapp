@@ -47,6 +47,3 @@ Thumbs.db
 ## firebase
 .firebaserc
 .firebase
-
-## firebase config
-firebase-config.ts
