@@ -4,3 +4,6 @@
   padding: 16px 24px;
   box-sizing: border-box;
 }
+.spacer {
+  flex: 1 1 auto;
+}

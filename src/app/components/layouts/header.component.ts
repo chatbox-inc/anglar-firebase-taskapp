@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import {AuthService} from "../../services/auth.service";
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit(): void {
+  @Input()
+  isLogin!: boolean;
+  constructor(
+    private authService: AuthService,
+  ) { }
+
+  ngOnInit() {
+    console.log(this.isLogin)
   }
-
+  async login() {
+    await this.authService.signInWithGoogle()
+  }
+  async logout() {
+    await this.authService.signOutWithGoogle()
+  }
 }

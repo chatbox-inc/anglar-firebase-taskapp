@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import {Task} from "../interfaces/task.interface";
-import {TaskService} from "../services/task.service";
+import {Task} from "../../interfaces/task.interface";
+import {TaskService} from "../../services/task.service";
 import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-task-new',
-  templateUrl: './task-new.component.html',
+  templateUrl: './new.component.html',
 })
-export class TaskNewComponent implements OnInit {
+export class NewComponent implements OnInit {
 
   task: Task = {
     name: null,

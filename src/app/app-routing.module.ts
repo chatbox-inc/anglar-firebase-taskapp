@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {LoginComponent} from "./login/login.component";
-import {TasksComponent} from "./task/tasks.component";
-import {TaskNewComponent} from "./task/task-new.component";
-import {TaskDetailComponent} from "./task/task-detail.component";
-import {TaskEditComponent} from "./task/task-edit.component";
-import {TaskDoneComponent} from "./task/task-done.component";
+import {ListComponent} from "./pages/tasks/list.component";
+import {NewComponent} from "./pages/tasks/new.component";
+import {IdComponent} from "./pages/tasks/id.component";
+import {EditComponent} from "./pages/tasks/edit.component";
+import {DoneComponent} from "./pages/tasks/done.component";
+import {AuthGuard} from "./guard/auth.guard";
+import {HomeComponent} from "./pages/home/home.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
-  {path: "login", component: LoginComponent},
-  { path: "tasks", component: TasksComponent},
-  { path: "tasks/new", component: TaskNewComponent },
-  { path: "tasks/:id", component: TaskDetailComponent },
-  { path: "tasks/:id/edit", component: TaskEditComponent },
-  { path: "tasks/:id/done", component: TaskDoneComponent }
+  {path: "", component: HomeComponent},
+  { path: "tasks", component: ListComponent, canActivate: [AuthGuard]},
+  { path: "tasks/new", component: NewComponent, canActivate: [AuthGuard]},
+  { path: "tasks/:id", component: IdComponent, canActivate: [AuthGuard]},
+  { path: "tasks/:id/edit", component: EditComponent, canActivate: [AuthGuard]},
+  { path: "tasks/:id/done", component: DoneComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({

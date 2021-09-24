@@ -1,5 +1,10 @@
 <mat-toolbar>
   <mat-toolbar-row class="container">
     <span routerLink="/tasks">MyTasks</span>
+    <span class="spacer"></span>
+    <div>
+      <button *ngIf="isLogin" mat-raised-button color="accent" (click)="logout()">ログアウト</button>
+      <button *ngIf="!isLogin" mat-raised-button color="primary" (click)="login()">ログイン</button>
+    </div>
   </mat-toolbar-row>
 </mat-toolbar>

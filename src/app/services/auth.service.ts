@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import {AngularFireAuth} from "@angular/fire/compat/auth";
 import firebase from "firebase/compat/app";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+
   constructor(
     private readonly afAuth: AngularFireAuth
   ) { }
@@ -18,5 +20,8 @@ export class AuthService {
   }
   user() {
     return this.afAuth.user
+  }
+  checkIsLogin(): Observable<any> {
+    return this.afAuth.authState
   }
 }

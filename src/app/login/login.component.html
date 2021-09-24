@@ -1,8 +1,0 @@
-<section>
-  <div>
-    <p *ngIf="user">{{user.displayName}}さんがログイン中です</p>
-    <p *ngIf="!user">ログアウトしました</p>
-  </div>
-  <button mat-raised-button color="primary" (click)="login()">ログイン</button>
-  <button mat-raised-button color="accent" (click)="logout()">ログアウト</button>
-</section>
