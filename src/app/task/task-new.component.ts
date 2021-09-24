@@ -20,7 +20,10 @@ export class TaskNewComponent implements OnInit {
   }
 
   createTask() {
-    if (!this.task.name || !this.task.body || !this.task.date_on) return
+    if (!this.task.name || !this.task.body || !this.task.date_on) {
+      alert("未入力の値があります")
+      return
+    }
     this.taskService.createTask(this.task)
     this.router.navigate(["/tasks"])
   }

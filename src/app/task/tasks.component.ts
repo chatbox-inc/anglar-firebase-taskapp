@@ -13,7 +13,6 @@ export class TasksComponent implements OnInit {
   constructor(private taskService: TaskService) { }
 
   ngOnInit(): void {
-    // 変更
     this.taskService.getTasks().subscribe(tasks => this.tasks = tasks)
   }
 }
