@@ -1,5 +1,9 @@
 # todo-angular
 
+## github actionについて
+- secrets.FIREBASE_PROJECT_IDにはfirebaseのプロジェクトIDを設定
+- secrets.FIREBASE_TOKENには `firebase login:ci`で取得できるトークンを設定
+
 ## firebase hostingについて
 - `npm run build`で、初期設定では`dist/[アプリ名]`で出力されるため、publicを`dist/[アプリ名]`にするか、angular.jsonの`outputPath`を変更する必要あり
 
